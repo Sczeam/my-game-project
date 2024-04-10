@@ -94,6 +94,10 @@ const Game = () => {
   return (
     <div>
       <h2>Question: {question}</h2>
+      <p>
+        Difficulty:{" "}
+        {questions.length > 0 ? questions[questionIndex].difficulty : ""}
+      </p>
       <p>Time remaining: {timer} seconds</p>
       <ul>
         {options.map((option, index) => (
