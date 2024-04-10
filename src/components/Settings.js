@@ -1,3 +1,4 @@
+// components/Settings.js
 import React from "react";
 
 const Settings = () => {

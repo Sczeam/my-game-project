@@ -1,3 +1,4 @@
+// components/Game.js
 import React from "react";
 
 const Game = () => {
