@@ -8,6 +8,7 @@ const Game = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [isAnswered, setIsAnswered] = useState(false);
   const [timer, setTimer] = useState(10); // Timer in seconds
+  const [earnings, setEarnings] = useState(0);
 
   useEffect(() => {
     // Fetch question data from quizData
@@ -45,15 +46,35 @@ const Game = () => {
     // Handle option selection
     if (!isAnswered) {
       setSelectedOption(option);
-      // Perform additional logic (e.g., check answer)
+      const currentQuestion = quizData[questionIndex];
+      if (option === currentQuestion.correctAnswer) {
+        const earningsFromQuestion = calculateEarnings(
+          currentQuestion.difficulty
+        );
+        setEarnings((prevEarnings) => prevEarnings + earningsFromQuestion);
+      } else {
+        // Handle incorrect answer (e.g., deduct earnings or game over)
+        // For now, let's just move to the next question
+      }
       setIsAnswered(true);
-      // Optionally, you can also clear the timer here
+      // Move to the next question after a delay
+      setTimeout(() => {
+        setQuestionIndex((prevIndex) => prevIndex + 1);
+      }, 2000); // Adjust the delay as needed
     }
   };
 
-  const handleNextQuestion = () => {
-    // Move to the next question
-    setQuestionIndex((prevIndex) => prevIndex + 1);
+  const calculateEarnings = (difficulty) => {
+    switch (difficulty) {
+      case "easy":
+        return 100;
+      case "medium":
+        return 200;
+      case "hard":
+        return 300;
+      default:
+        return 0;
+    }
   };
 
   return (
@@ -75,7 +96,7 @@ const Game = () => {
       {isAnswered && (
         <div>
           <p>Your answer: {selectedOption}</p>
-          <button onClick={handleNextQuestion}>Next Question</button>
+          <p>Earnings: ${earnings}</p>
         </div>
       )}
     </div>
