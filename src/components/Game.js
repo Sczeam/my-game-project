@@ -1,6 +1,7 @@
 // Game.js
 import React, { useState, useEffect } from "react";
 import quizData from "../quizData.json";
+import BackgroundMusic from "./BackgroundMusic";
 
 const Game = () => {
   const [allQuestions, setAllQuestions] = useState([]);
@@ -82,6 +83,7 @@ const Game = () => {
       ) : (
         currentQuestion && (
           <div>
+            <BackgroundMusic />
             <h2>Question: {currentQuestion.question}</h2>
             <ul>
               {currentQuestion.options.map((option, index) => (
