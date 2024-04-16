@@ -1,14 +1,15 @@
 // Game.js
 import React, { useState, useEffect } from "react";
 import quizData from "../quizData.json";
+import BackgroundMusic from "./BackgroundMusic";
 
-const Game = () => {
+const Game = ({ timerDuration }) => {
   const [allQuestions, setAllQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [totalEarnings, setTotalEarnings] = useState(0);
   const [askedQuestions, setAskedQuestions] = useState([]);
   const [gameOver, setGameOver] = useState(false);
-  const [timerSeconds, setTimerSeconds] = useState(10); // Timer duration in seconds
+  const [timerSeconds, setTimerSeconds] = useState(timerDuration);
 
   useEffect(() => {
     setAllQuestions(quizData);
@@ -55,7 +56,7 @@ const Game = () => {
       const newTotalEarnings = totalEarnings + currentQuestion.reward;
       setTotalEarnings(newTotalEarnings);
       selectRandomQuestion();
-      setTimerSeconds(10); // Reset timer
+      setTimerSeconds(timerDuration); // Reset timer
     } else {
       setTotalEarnings(Math.max(totalEarnings - currentQuestion.reward, 0)); // Deduct earnings for wrong answer
       setGameOver(true);
@@ -67,7 +68,7 @@ const Game = () => {
     setAskedQuestions([]);
     setGameOver(false);
     setCurrentQuestion(null);
-    setTimerSeconds(10);
+    setTimerSeconds(timerDuration);
     selectRandomQuestion();
   };
 
@@ -82,6 +83,7 @@ const Game = () => {
       ) : (
         currentQuestion && (
           <div>
+            <BackgroundMusic />
             <h2>Question: {currentQuestion.question}</h2>
             <ul>
               {currentQuestion.options.map((option, index) => (
