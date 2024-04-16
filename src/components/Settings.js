@@ -1,32 +1,31 @@
-// Settings.js
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Settings = ({ timerDuration, setTimerDuration }) => {
-  const [timerValue, setTimerValue] = useState(timerDuration);
-
-  const handleChange = (event) => {
-    const newTimerValue = parseInt(event.target.value);
-    setTimerValue(newTimerValue);
-  };
+  const [tempTimerDuration, setTempTimerDuration] = useState(timerDuration);
 
   const handleSaveSettings = () => {
-    setTimerDuration(timerValue);
+    setTimerDuration(tempTimerDuration);
   };
 
   return (
-    <div className="settings">
+    <div className="settings-container">
       <h2>Settings</h2>
-      <label htmlFor="timer">Timer Duration: {timerValue} seconds</label>
-      <input
-        type="range"
-        id="timer"
-        name="timer"
-        min="5"
-        max="60"
-        value={timerValue}
-        onChange={handleChange}
-      />
-      <button onClick={handleSaveSettings}>Save Settings</button>
+      <div className="timer-duration">
+        <label>Timer Duration:</label>
+        <input
+          type="range"
+          min={5}
+          max={60}
+          value={tempTimerDuration}
+          onChange={(e) => setTempTimerDuration(parseInt(e.target.value))}
+        />
+        <span>{tempTimerDuration} seconds</span>
+      </div>
+      <button onClick={handleSaveSettings}>Save</button>
+      <Link to="/">
+        <button>Back</button>
+      </Link>
     </div>
   );
 };
