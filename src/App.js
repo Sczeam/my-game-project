@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import Game from "./components/Game";
 import Settings from "./components/Settings";
+import "./components/Game.css";
+import "./components/MainMenu.css";
+import "./components/Settings.css";
 
 function App() {
   // Define state for timer duration

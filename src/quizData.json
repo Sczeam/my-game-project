@@ -5,378 +5,378 @@
       "options": ["Paris", "London", "Berlin", "Madrid"],
       "correctAnswer": "Paris",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Which planet is known as the Red Planet?",
       "options": ["Mars", "Venus", "Jupiter", "Saturn"],
       "correctAnswer": "Mars",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the chemical symbol for water?",
       "options": ["H2O", "CO2", "O2", "H2SO4"],
       "correctAnswer": "H2O",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who wrote \"To Kill a Mockingbird\"?",
       "options": ["Harper Lee", "Mark Twain", "Ernest Hemingway", "F. Scott Fitzgerald"],
       "correctAnswer": "Harper Lee",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the powerhouse of the cell?",
       "options": ["Nucleus", "Mitochondria", "Golgi Apparatus", "Endoplasmic Reticulum"],
       "correctAnswer": "Mitochondria",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who painted the Mona Lisa?",
       "options": ["Leonardo da Vinci", "Michelangelo", "Vincent van Gogh", "Pablo Picasso"],
       "correctAnswer": "Leonardo da Vinci",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the largest mammal in the world?",
       "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
       "correctAnswer": "Blue Whale",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the symbol for the chemical element gold?",
       "options": ["Au", "Ag", "Fe", "Pb"],
       "correctAnswer": "Au",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Which country is famous for its tulips?",
       "options": ["Netherlands", "Italy", "France", "Japan"],
       "correctAnswer": "Netherlands",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who discovered penicillin?",
       "options": ["Alexander Fleming", "Louis Pasteur", "Jonas Salk", "Edward Jenner"],
       "correctAnswer": "Alexander Fleming",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the capital of Japan?",
       "options": ["Tokyo", "Beijing", "Seoul", "Bangkok"],
       "correctAnswer": "Tokyo",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the largest ocean on Earth?",
       "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
       "correctAnswer": "Pacific Ocean",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who wrote \"Romeo and Juliet\"?",
       "options": ["William Shakespeare", "Charles Dickens", "Jane Austen", "Emily Bronte"],
       "correctAnswer": "William Shakespeare",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the chemical symbol for iron?",
       "options": ["Fe", "Ir", "In", "Au"],
       "correctAnswer": "Fe",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who painted the ceiling of the Sistine Chapel?",
       "options": ["Michelangelo", "Leonardo da Vinci", "Raphael", "Donatello"],
       "correctAnswer": "Michelangelo",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the capital of Australia?",
       "options": ["Canberra", "Sydney", "Melbourne", "Brisbane"],
       "correctAnswer": "Canberra",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the largest organ in the human body?",
       "options": ["Skin", "Liver", "Brain", "Heart"],
       "correctAnswer": "Skin",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who developed the theory of relativity?",
       "options": ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"],
       "correctAnswer": "Albert Einstein",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Which gas is most abundant in Earth's atmosphere?",
       "options": ["Nitrogen", "Oxygen", "Carbon dioxide", "Helium"],
       "correctAnswer": "Nitrogen",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the boiling point of water in Celsius?",
       "options": ["100°C", "0°C", "212°C", "-273°C"],
       "correctAnswer": "100°C",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who was the first man to walk on the moon?",
       "options": ["Neil Armstrong", "Buzz Aldrin", "Alan Shepard", "Yuri Gagarin"],
       "correctAnswer": "Neil Armstrong",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the chemical symbol for sodium?",
       "options": ["Na", "So", "No", "Ni"],
       "correctAnswer": "Na",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who is the author of \"Harry Potter\" series?",
       "options": ["J.K. Rowling", "Stephenie Meyer", "George R.R. Martin", "J.R.R. Tolkien"],
       "correctAnswer": "J.K. Rowling",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "What is the capital of Canada?",
       "options": ["Ottawa", "Toronto", "Vancouver", "Montreal"],
       "correctAnswer": "Ottawa",
       "difficulty": "easy",
-      "reward": 100
+      "reward": 1000
     },
     {
       "question": "Who discovered gravity?",
       "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Johannes Kepler"],
       "correctAnswer": "Isaac Newton",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the largest desert in the world?",
       "options": ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Antarctic Desert"],
       "correctAnswer": "Sahara Desert",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the chemical symbol for silver?",
       "options": ["Ag", "Si", "Sl", "Sr"],
       "correctAnswer": "Ag",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "Who wrote The Great Gatsby?",
       "options": ["F. Scott Fitzgerald", "Ernest Hemingway", "Mark Twain", "Harper Lee"],
       "correctAnswer": "F. Scott Fitzgerald",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the smallest prime number?",
       "options": ["2", "1", "3", "0"],
       "correctAnswer": "2",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "Which planet is known as the Morning Star?",
       "options": ["Venus", "Mars", "Mercury", "Jupiter"],
       "correctAnswer": "Venus",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the chemical symbol for carbon?",
       "options": ["C", "Ca", "Co", "Cr"],
       "correctAnswer": "C",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "Who is the current President of the United States?",
       "options": ["Joe Biden", "Donald Trump", "Barack Obama", "George W. Bush"],
       "correctAnswer": "Joe Biden",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the capital of Brazil?",
       "options": ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"],
       "correctAnswer": "Brasília",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the main component of Earth's atmosphere?",
       "options": ["Nitrogen", "Oxygen", "Carbon dioxide", "Hydrogen"],
       "correctAnswer": "Nitrogen",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "Who painted Starry Night?",
       "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
       "correctAnswer": "Vincent van Gogh",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the chemical symbol for helium?",
       "options": ["He", "H", "Hy", "Hm"],
       "correctAnswer": "He",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the largest bone in the human body?",
       "options": ["Femur", "Tibia", "Fibula", "Humerus"],
       "correctAnswer": "Femur",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "Who wrote 1984?",
       "options": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "J.D. Salinger"],
       "correctAnswer": "George Orwell",
       "difficulty": "medium",
-      "reward": 200
+      "reward": 2000
       },
       {
       "question": "What is the smallest unit of matter?",
       "options": ["Atom", "Molecule", "Electron", "Proton"],
       "correctAnswer": "Atom",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "What is the capital of South Africa?",
       "options": ["Pretoria", "Cape Town", "Johannesburg", "Durban"],
       "correctAnswer": "Pretoria",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "Who invented the telephone?",
       "options": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Guglielmo Marconi"],
       "correctAnswer": "Alexander Graham Bell",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "What is the largest organ in the human body?",
       "options": ["Liver", "Brain", "Heart", "Skin"],
       "correctAnswer": "Skin",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "Which country is known as the Land of the Rising Sun?",
       "options": ["Japan", "China", "India", "South Korea"],
       "correctAnswer": "Japan",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "What is the chemical symbol for potassium?",
       "options": ["K", "P", "Pt", "Po"],
       "correctAnswer": "K",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "Who was the first female Prime Minister of the United Kingdom?",
       "options": ["Margaret Thatcher", "Theresa May", "Indira Gandhi", "Angela Merkel"],
       "correctAnswer": "Margaret Thatcher",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "What is the longest river in the world?",
       "options": ["Nile River", "Amazon River", "Yangtze River", "Mississippi River"],
       "correctAnswer": "Nile River",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "Who was the first woman to win a Nobel Prize?",
       "options": ["Marie Curie", "Mother Teresa", "Rosalind Franklin", "Jane Goodall"],
       "correctAnswer": "Marie Curie",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
       "question": "What is the chemical symbol for mercury?",
       "options": ["Hg", "Me", "Ma", "Hy"],
       "correctAnswer": "Hg",
       "difficulty": "hard",
-      "reward": 300
+      "reward": 3000
       },
       {
         "question": "What is the capital of New Zealand?",
         "options": ["Wellington", "Auckland", "Sydney", "Christchurch"],
         "correctAnswer": "Wellington",
         "difficulty": "hard",
-        "reward": 300
+        "reward": 3000
         },
         {
           "question": "Who formulated the theory of evolution by natural selection?",
           "options": ["Charles Darwin", "Gregor Mendel", "Jean-Baptiste Lamarck", "Alfred Russel Wallace"],
           "correctAnswer": "Charles Darwin",
           "difficulty": "very hard",
-          "reward": 500
+          "reward": 5000
           },
           {
           "question": "What is the largest moon in the solar system?",
           "options": ["Ganymede", "Titan", "Callisto", "Io"],
           "correctAnswer": "Ganymede",
           "difficulty": "very hard",
-          "reward": 500
+          "reward": 5000
           },
           {
           "question": "Who discovered the first antibiotic?",
           "options": ["Alexander Fleming", "Louis Pasteur", "Joseph Lister", "Robert Koch"],
           "correctAnswer": "Alexander Fleming",
           "difficulty": "very hard",
-          "reward": 500
+          "reward": 5000
           },
           {
           "question": "What is the chemical symbol for tungsten?",
           "options": ["W", "Tu", "T", "Tw"],
           "correctAnswer": "W",
           "difficulty": "very hard",
-          "reward": 500
+          "reward": 5000
           },
           {
           "question": "Who is considered the father of modern physics?",
           "options": ["Isaac Newton", "Albert Einstein", "Niels Bohr", "Galileo Galilei"],
           "correctAnswer": "Albert Einstein",
           "difficulty": "very hard",
-          "reward": 500
+          "reward": 5000
           }
     
   ]

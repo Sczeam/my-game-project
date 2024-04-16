@@ -1,4 +1,3 @@
-// Game.js
 import React, { useState, useEffect } from "react";
 import quizData from "../quizData.json";
 import BackgroundMusic from "./BackgroundMusic";
@@ -21,6 +20,12 @@ const Game = ({ timerDuration }) => {
       startTimer();
     }
   }, [allQuestions]);
+
+  useEffect(() => {
+    if (totalEarnings >= 1000000) {
+      setGameOver(true);
+    }
+  }, [totalEarnings]);
 
   useEffect(() => {
     if (timerSeconds === 0) {
@@ -73,29 +78,37 @@ const Game = ({ timerDuration }) => {
   };
 
   return (
-    <div className="game">
+    <div className="game-container">
       {gameOver ? (
-        <div>
-          <h2>Game Over!</h2>
+        <div className="game-over">
+          <h2>{totalEarnings >= 1000000 ? "You Win!" : "Game Over!"}</h2>
           <p>Total Earnings: {totalEarnings}</p>
-          <button onClick={restartGame}>Restart Game</button>
+          <button className="restart-button" onClick={restartGame}>
+            Restart Game
+          </button>
         </div>
       ) : (
         currentQuestion && (
-          <div>
+          <div className="question-container">
             <BackgroundMusic />
-            <h2>Question: {currentQuestion.question}</h2>
-            <ul>
+            <h2 className="question">{currentQuestion.question}</h2>
+            <ul className="options">
               {currentQuestion.options.map((option, index) => (
-                <li key={index} onClick={() => handleAnswer(option)}>
+                <li
+                  key={index}
+                  className="option"
+                  onClick={() => handleAnswer(option)}
+                >
                   {option}
                 </li>
               ))}
             </ul>
-            <p>Difficulty: {currentQuestion.difficulty}</p>
-            <p>Reward: {currentQuestion.reward}</p>
-            <p>Total Earnings: {totalEarnings}</p>
-            <p>Time Remaining: {timerSeconds} seconds</p>
+            <div className="game-stats">
+              <p>Difficulty: {currentQuestion.difficulty}</p>
+              <p>Reward: {currentQuestion.reward}</p>
+              <p>Total Earnings: {totalEarnings}</p>
+              <p>Time Remaining: {timerSeconds} seconds</p>
+            </div>
           </div>
         )
       )}
