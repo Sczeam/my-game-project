@@ -1,121 +1,101 @@
+// Game.js
 import React, { useState, useEffect } from "react";
 import quizData from "../quizData.json";
 
 const Game = () => {
-  const [questions, setQuestions] = useState([]);
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [question, setQuestion] = useState("");
-  const [options, setOptions] = useState([]);
-  const [selectedOption, setSelectedOption] = useState("");
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [timer, setTimer] = useState(10); // Timer in seconds
-  const [earnings, setEarnings] = useState(0);
+  const [allQuestions, setAllQuestions] = useState([]);
+  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [totalEarnings, setTotalEarnings] = useState(0);
   const [askedQuestions, setAskedQuestions] = useState([]);
+  const [gameOver, setGameOver] = useState(false);
+  const [timerSeconds, setTimerSeconds] = useState(10); // Timer duration in seconds
 
-  // Shuffle the questions array
   useEffect(() => {
-    const shuffledQuestions = [...quizData].sort(() => Math.random() - 0.5);
-    setQuestions(shuffledQuestions);
+    setAllQuestions(quizData);
   }, []);
 
   useEffect(() => {
-    if (questions.length > 0) {
-      const currentQuestion = questions[questionIndex];
-      setQuestion(currentQuestion.question);
-      setOptions(currentQuestion.options);
-      setSelectedOption("");
-      setIsAnswered(false);
-      setTimer(10); // Reset timer
+    if (allQuestions.length > 0) {
+      selectRandomQuestion();
+      startTimer();
     }
-  }, [questionIndex, questions]);
+  }, [allQuestions]);
 
   useEffect(() => {
-    // Start the timer countdown
-    const interval = setInterval(() => {
-      if (timer > 0 && !isAnswered) {
-        setTimer((prevTimer) => prevTimer - 1);
-      } else {
-        // Timer has expired or question answered
-        clearInterval(interval);
-        // Handle timer expiry logic (e.g., show correct answer)
-        setIsAnswered(true);
-      }
+    if (timerSeconds === 0) {
+      setGameOver(true);
+    }
+  }, [timerSeconds]);
+
+  const startTimer = () => {
+    const timer = setInterval(() => {
+      setTimerSeconds((prevSeconds) => prevSeconds - 1);
     }, 1000);
 
-    // Clean up timer interval on component unmount or timer expiry
-    return () => clearInterval(interval);
-  }, [timer, isAnswered]);
+    return () => clearInterval(timer);
+  };
 
-  const handleOptionSelect = (option) => {
-    // Handle option selection
-    if (!isAnswered) {
-      setSelectedOption(option);
-      const currentQuestion = questions[questionIndex];
-      if (option === currentQuestion.correctAnswer) {
-        const earningsFromQuestion = calculateEarnings(
-          currentQuestion.difficulty
-        );
-        setEarnings((prevEarnings) => prevEarnings + earningsFromQuestion);
-      } else {
-        // Handle incorrect answer (e.g., deduct earnings or game over)
-        // For now, let's just move to the next question
-      }
-      setIsAnswered(true);
-      // Move to the next question after a delay
-      setTimeout(() => {
-        setQuestionIndex((prevIndex) => {
-          const nextIndex = prevIndex + 1;
-          if (nextIndex < questions.length) {
-            return nextIndex;
-          } else {
-            // Game completed, reset question index and earnings
-            setQuestionIndex(0);
-            setEarnings(0);
-            return 0;
-          }
-        });
-      }, 2000); // Adjust the delay as needed
+  const selectRandomQuestion = () => {
+    const availableQuestions = allQuestions.filter(
+      (question) => !askedQuestions.includes(question)
+    );
+    if (availableQuestions.length > 0) {
+      const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+      const selectedQuestion = availableQuestions[randomIndex];
+      setCurrentQuestion(selectedQuestion);
+      setAskedQuestions([...askedQuestions, selectedQuestion]);
+    } else {
+      // All questions have been asked, reset askedQuestions array
+      setAskedQuestions([]);
     }
   };
 
-  const calculateEarnings = (difficulty) => {
-    switch (difficulty) {
-      case "easy":
-        return 100;
-      case "medium":
-        return 200;
-      case "hard":
-        return 300;
-      default:
-        return 0;
+  const handleAnswer = (selectedOption) => {
+    if (selectedOption === currentQuestion.correctAnswer) {
+      const newTotalEarnings = totalEarnings + currentQuestion.reward;
+      setTotalEarnings(newTotalEarnings);
+      selectRandomQuestion();
+      setTimerSeconds(10); // Reset timer
+    } else {
+      setTotalEarnings(Math.max(totalEarnings - currentQuestion.reward, 0)); // Deduct earnings for wrong answer
+      setGameOver(true);
     }
+  };
+
+  const restartGame = () => {
+    setTotalEarnings(0);
+    setAskedQuestions([]);
+    setGameOver(false);
+    setCurrentQuestion(null);
+    setTimerSeconds(10);
+    selectRandomQuestion();
   };
 
   return (
-    <div>
-      <h2>Question: {question}</h2>
-      <p>
-        Difficulty:{" "}
-        {questions.length > 0 ? questions[questionIndex].difficulty : ""}
-      </p>
-      <p>Time remaining: {timer} seconds</p>
-      <ul>
-        {options.map((option, index) => (
-          <li key={index}>
-            <button
-              disabled={isAnswered}
-              onClick={() => handleOptionSelect(option)}
-            >
-              {option}
-            </button>
-          </li>
-        ))}
-      </ul>
-      {isAnswered && (
+    <div className="game">
+      {gameOver ? (
         <div>
-          <p>Your answer: {selectedOption}</p>
-          <p>Earnings: ${earnings}</p>
+          <h2>Game Over!</h2>
+          <p>Total Earnings: {totalEarnings}</p>
+          <button onClick={restartGame}>Restart Game</button>
         </div>
+      ) : (
+        currentQuestion && (
+          <div>
+            <h2>Question: {currentQuestion.question}</h2>
+            <ul>
+              {currentQuestion.options.map((option, index) => (
+                <li key={index} onClick={() => handleAnswer(option)}>
+                  {option}
+                </li>
+              ))}
+            </ul>
+            <p>Difficulty: {currentQuestion.difficulty}</p>
+            <p>Reward: {currentQuestion.reward}</p>
+            <p>Total Earnings: {totalEarnings}</p>
+            <p>Time Remaining: {timerSeconds} seconds</p>
+          </div>
+        )
       )}
     </div>
   );
