@@ -15,16 +15,9 @@ const MainMenu = () => {
         <li>
           <Link to="/settings">Settings</Link>
         </li>
-        <li>
-          <button onClick={handleExit}>Exit</button>
-        </li>
       </ul>
     </div>
   );
-};
-
-const handleExit = () => {
-  window.close(); // Close the web app
 };
 
 export default MainMenu;
