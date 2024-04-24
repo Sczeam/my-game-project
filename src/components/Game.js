@@ -63,7 +63,6 @@ const Game = ({ timerDuration }) => {
       selectRandomQuestion();
       setTimerSeconds(timerDuration); // Reset timer
     } else {
-      setTotalEarnings(Math.max(totalEarnings - currentQuestion.reward, 0)); // Deduct earnings for wrong answer
       setGameOver(true);
     }
   };
